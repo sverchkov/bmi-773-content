@@ -1,0 +1,87 @@
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+
+%% GRAPHICS
+
+\usepackage{graphicx}
+\graphicspath{{images/},{figures/}}
+\usepackage{tikz}
+
+%% COLORS
+\definecolor{UWRed}{HTML}{C5050C}
+\definecolor{TintedBG}{HTML}{EEEEFF}
+
+%% SLIDE COLOR SETTINGS
+\setbeamercolor{structure}{fg=UWRed}
+\setbeamercolor{title page}{fg=white}
+\setbeamercolor{title}{fg=white}
+
+%% RM NAV SYMBOLS
+\setbeamertemplate{navigation symbols}{}
+
+%% FONTS
+\setbeamerfont{title}{size=\huge\bfseries}
+
+%% LOGO on slides
+\logo{\begin{tikzpicture}[overlay]
+	\node[anchor=north east,inner sep=0] at (0,86mm) {\includegraphics[height=10mm]{SMPH_color-flush.pdf}};
+	\end{tikzpicture}}
+
+%% CONTENT BEGINS
+
+\title{Database Concepts}
+\subtitle{BMI 773: Clinical Research Informatics}
+\author{Yuriy Sverchkov}
+\institute{University of Wisconsin--Madison}
+\date{February 10, 2020}
+
+\begin{document}
+	
+	{
+		\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth]{UW-lake.png}}
+		\begin{frame}[plain]
+			\vskip4cm
+			\titlepage
+		\end{frame}
+	}
+
+	\begin{frame}{Database Concepts}
+		\begin{itemize}
+			\item Transactional databases vs data warehouses
+			\item The relational model
+			\begin{itemize}
+				\item Tables, records, and columns
+				\item Schemas
+				\item Normal forms
+				\item Keys
+			\end{itemize}
+			\item Learn how to design and execute SQL queries
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Transactional databases vs data warehouses}
+	\end{frame}
+
+	\begin{frame}{The relational model: table}
+		Table/relation...
+	\end{frame}
+
+	\begin{frame}{Why have more than one table?}
+		Normal forms
+	\end{frame}
+
+	\begin{frame}{Schemas}
+		Star schema
+		Other schemas?
+	\end{frame}
+
+	\begin{frame}{SQL}
+		select/insert/delete (+where)
+		merge
+		group by
+		summary functions
+	\end{frame}
+
+\end{document}
