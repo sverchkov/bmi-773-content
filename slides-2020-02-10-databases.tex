@@ -57,15 +57,32 @@
 				\item Normal forms
 				\item Keys
 			\end{itemize}
-			\item Learn how to design and execute SQL queries
+			\item How to design and execute SQL queries
 		\end{itemize}
 	\end{frame}
 
 	\begin{frame}{Transactional databases vs data warehouses}
+		\centering
+		
+		\begin{tabular}{lp{0.3\linewidth}p{0.3\linewidth}}
+			& \textbf{Transactional database} & \textbf{Data warehouse} \\
+			Purpose & Maintain up-to-date record of events & Collect and aggregate historical data \\
+			Update frequency & In real-time & Periodically (a few times per day or less) \\
+			Optimized for & Fast updates, fast look-up of individual patients & Analytics, searches of collections \\
+			At Epic & Chronicles & Clarity and Caboodle
+		\end{tabular}
+		
 	\end{frame}
+
+	% Not all DBs are relational:
+	% e.g. Chronicles uses InterSystems Caché, which is a hierarchical database
+	% It's actually very popular choice for the transactional system
 
 	\begin{frame}{The relational model: table}
 		Table/relation...
+		\begin{tikzpicture}
+			\
+		\end{tikzpicture}
 	\end{frame}
 
 	\begin{frame}{Why have more than one table?}
