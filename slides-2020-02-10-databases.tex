@@ -99,10 +99,49 @@
 	% Do a thing on primary key/surrogate key/natural key?
 
 	\begin{frame}{Why have more than one table?}
-		\begin{tabular}{cccccc}
-			First Name & Last Name & Gender & Birth Date & Drug & Drug date \\
-			Lauren & Johnson & F & 1982-03-12 & Acetaminophen 325 MG Oral Tablet & 2010-01-06 \\
+	
+	{\tiny
+		\begin{tabular}{lllllll}
+			\bf First Name & \bf Last Name & \bf Birth Date \only<2->{& \bf Drug & \bf Prescription date} \only<3>{& \bf Drug 2 & \bf Prescription date 2} \\ \hline
+			Lauren & Johnson & 1982-03-12 \only<2->{& Acetaminophen & 2010-01-06} \only<3>{& --- & ---} \\
+			Alice & Smith & 1979-12-04 \only<2->{& Amoxicillin & 1998-01-29 } \only<3>{& Lisinopril & 2019-05-26 } \\
+			\only<4->{Alice & Smith & 1979-12-04 & Lisinopril & 2019-05-26 \\}
+			James & White & 1964-09-01 \only<2->{& Albuterol & 1990-12-15 } \only<3>{& --- & ---} \\
 		\end{tabular}
+	}
+	\vfill
+		\begin{itemize}
+			\item Consider a database of patients \only<2->{and their prescriptions}
+			\item<2-> How can we track multiple prescriptions for a patient?
+				\begin{itemize}
+					\item<3-> Add columns?
+					\item<4-> One row per prescription?
+				\end{itemize}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		
+		{\tiny
+			\begin{tabular}{llll}
+				\bf Patient ID & \bf First Name & \bf Last Name & \bf Birth Date \\ \hline
+				1 &	Lauren & Johnson & 1982-03-12 \\
+				2 & Alice & Smith & 1979-12-04 \\
+				3 & James & White & 1964-09-01 \\
+			\end{tabular}
+		}
+	
+		{\tiny
+			\begin{tabular}{lll}
+				\bf Patient ID & \bf Drug & \bf Prescription date \\ \hline
+				1 & Acetaminophen & 2010-01-06 \\
+				2 & Amoxicillin & 1998-01-29 \\
+				2 & Lisinopril & 2019-05-26 \\
+				3 & Albuterol & 1990-12-15 \\
+			\end{tabular}
+		}
+	
+		%TODO: Add other tables
 	\end{frame}
 
 	% Then add another drug
