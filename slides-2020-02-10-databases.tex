@@ -497,10 +497,39 @@
 					5 & 5 & Warfarin & 1961-08-01 \\
 				\end{tabular}
 			\end{tcolorbox}
+		\column{0.43\linewidth}
+		\begin{tcolorbox}[colback=LightGreen, colframe=DarkGreen]
+			\small
+			\verb|SELECT COUNT(prescription_id)|
+			\verb|    FROM Prescriptions;|
+		\end{tcolorbox}
+		\pause
+		\begin{tcolorbox}[colback=LightBlue, colframe=DarkBlue]
+			\tiny
+			\begin{tabular}{l}
+				\bf COUNT(prescription\_id) \\
+				5 \\
+			\end{tabular}
+		\end{tcolorbox}
+		\pause
 		\end{columns}
-		\begin{columns}
-			\column{0.47\linewidth}
-		\end{columns}
+			\begin{tcolorbox}[colback=LightGreen, colframe=DarkGreen]
+				\small
+				\verb|SELECT patient_id, COUNT(prescription_id)|\\
+				\verb|    FROM Prescriptions|\\
+				\verb|    GROUP BY patient_id;|
+			\end{tcolorbox}
+			\pause
+			\begin{tcolorbox}[colback=LightBlue, colframe=DarkBlue]
+				\tiny
+				\begin{tabular}{ll}
+					\bf patient\_id & \bf COUNT(prescription\_id) \\
+					1 & 1 \\
+					2 & 2 \\
+					3 & 1 \\
+					5 & 1 \\
+				\end{tabular}
+			\end{tcolorbox}
 	\end{frame}
 
 \end{document}
