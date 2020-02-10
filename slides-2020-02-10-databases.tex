@@ -10,11 +10,15 @@
 \usepackage{tikz}
 \usetikzlibrary{graphs}
 
+\usepackage{tcolorbox}
+
 %% COLORS
 \definecolor{UWRed}{HTML}{C5050C}
 \definecolor{TintedBG}{HTML}{EEEEFF}
 \definecolor{DarkGreen}{HTML}{10A010}
 \definecolor{LightGreen}{HTML}{A0FFA0}
+\definecolor{DarkBlue}{HTML}{3030A0}
+\definecolor{LightBlue}{HTML}{D0D0FF}
 
 %% SLIDE COLOR SETTINGS
 \setbeamercolor{structure}{fg=UWRed}
@@ -212,7 +216,93 @@
 		\end{itemize}
 	\end{frame}
 
-	\begin{frame}{SQL SELECT}
+	\begin{frame}[fragile]{SQL SELECT}
+		
+		\begin{columns}
+			\column{0.49\linewidth}
+					
+		\begin{tcolorbox}[colback=LightGreen, colframe=DarkGreen]
+			\small
+			\verb|SELECT * FROM Patients;|
+		\end{tcolorbox}
+	 	\pause
+		
+		\begin{tcolorbox}[colback=LightBlue, colframe=DarkBlue]
+			{\tiny
+				\begin{tabular}{llll}
+					\bf patient\_id & \bf first\_name & \bf last\_name & \bf birth\_date \\ \hline
+					1 &	Lauren & Johnson & 1982-03-12 \\
+					2 & Alice & Smith & 1979-12-04 \\
+					3 & James & White & 1964-09-01 \\
+					4 & Lauren & Johnson & 1974-05-27 \\
+				\end{tabular}
+			}
+		\end{tcolorbox}
+		\pause
+	
+		\begin{tcolorbox}[colback=LightGreen, colframe=DarkGreen]
+			\small
+			\verb|SELECT first_name FROM Patients;|		
+		\end{tcolorbox}
+		\pause
+
+		\begin{tcolorbox}[colback=LightBlue, colframe=DarkBlue]
+			{\tiny
+				\begin{tabular}{l}
+					\bf first\_name \\ \hline
+					Lauren \\
+					Alice \\
+					James \\
+					Lauren \\
+				\end{tabular}
+			}
+		\end{tcolorbox}
+		\pause
+		
+		\column{0.49\linewidth}
+		
+		\begin{tcolorbox}[colback=LightGreen, colframe=DarkGreen]
+			\small
+			\verb|SELECT DISTINCT first_name|
+			\verb|    FROM Patients;|		
+		\end{tcolorbox}
+		\pause
+		
+		\begin{tcolorbox}[colback=LightBlue, colframe=DarkBlue]
+			{\tiny
+				\begin{tabular}{l}
+					\bf first\_name \\ \hline
+					Lauren \\
+					Alice \\
+					James \\
+				\end{tabular}
+			}
+		\end{tcolorbox}
+		\pause
+		
+		\begin{tcolorbox}[colback=LightGreen, colframe=DarkGreen]
+			\small
+			\verb|SELECT first_name, last_name|
+			\verb|    FROM Patients|
+			\verb|    WHERE birth_date > '1975';|
+		\end{tcolorbox}
+		\pause
+		
+		\begin{tcolorbox}[colback=LightBlue, colframe=DarkBlue]
+			{\tiny
+				\begin{tabular}{ll}
+					\bf first\_name & \bf last\_name \\ \hline
+					Lauren & Johnson \\
+					Alice & Smith \\
+				\end{tabular}
+			}
+		\end{tcolorbox}
+		
+		\end{columns}
+		
+	\end{frame}
+
+	\begin{frame}{SQL d}
 	\end{frame}
 
 \end{document}
