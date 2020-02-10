@@ -12,6 +12,8 @@
 %% COLORS
 \definecolor{UWRed}{HTML}{C5050C}
 \definecolor{TintedBG}{HTML}{EEEEFF}
+\definecolor{DarkGreen}{HTML}{10A010}
+\definecolor{LightGreen}{HTML}{A0FFA0}
 
 %% SLIDE COLOR SETTINGS
 \setbeamercolor{structure}{fg=UWRed}
@@ -64,12 +66,43 @@
 	\begin{frame}{Transactional databases vs data warehouses}
 	\end{frame}
 
-	\begin{frame}{The relational model: table}
-		Table/relation...
+	\begin{frame}{}
+		\centering
+		\begin{tikzpicture}[
+			whitenode/.style={fill=white, draw=none},
+			bluenode/.style={fill=blue!20, draw=blue!80},
+			greennode/.style={fill=LightGreen, draw=DarkGreen}
+		]
+			\matrix (table) [
+			ampersand replacement=\&,
+			row sep=0.1cm, column sep=0.1cm,
+			nodes={minimum width=2.5cm, minimum height=0.8cm, draw=black!80, very thick, fill=black!20, font=\ttfamily}
+			] {
+				\node[whitenode] {first\_name}; \& \node[whitenode] (attr) {\color<2>{blue!80}{last\_name}}; \&  \node[whitenode] {gender}; \& \node[whitenode] {birth\_date};\\
+				\node {Lauren}; \& \alt<2>{\node[bluenode] }{\node } {Johnson}; \& \node {F}; \& \node {1982-03-12}; \\
+				\alt<3>{\node[greennode] (record)}{\node (record)} {Peter}; \& \alt<2>{\node[bluenode]}{\alt<3>{\node[greennode]}{\node}} {Jurasik}; \& \alt<3>{\node[greennode]}{\node} {M}; \&  \alt<3>{\node[greennode]}{\node} {1950-04-25};  \\
+				\node {Richard}; \& \alt<2>{\node[bluenode]}{\node} {Biggs}; \& \node {M}; \& \node {1960-03-18}; \\
+				\node {Lauren}; \& \alt<2>{\node[bluenode]}{\node} {Johnson}; \& \node {F}; \& \node {1974-06-01}; \\
+			};
+		
+			\only<1->{
+				\node[anchor=south east, color=purple!80, font=\bfseries, align=center] at (table.north west) {Table\\ Relation\\ Relvar}; }
+			\only<2->{
+				\node[anchor=south, color=blue!80, font=\bfseries, align=center] at (attr.north) {Column\\Attribute\\Field};
+			}
+			\only<3->{
+				\node[anchor=east, color=DarkGreen, font=\bfseries, align=center] at (record.west) {Row\\Tuple\\Record};
+			}
+		\end{tikzpicture}
 	\end{frame}
 
+	% Do a thing on primary key/surrogate key/natural key?
+
 	\begin{frame}{Why have more than one table?}
-		Normal forms
+		\begin{tabular}{cccccc}
+			First Name & Last Name & Gender & Birth Date & Drug & Drug date \\
+			Lauren & Johnson & F & 1982-03-12 & Acetaminophen 325 MG Oral Tablet & 2010-01-06 \\
+		\end{tabular}
 	\end{frame}
 
 	\begin{frame}{Schemas}
