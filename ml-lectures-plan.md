@@ -29,9 +29,11 @@
   * RNN
   * CNN
   * Examples
-* Clustering
+* Clustering, imputation, recommender systems
   * K-means
   * Hierarchical
   * Neighbor embeddings (abstractly)
   * Topic model / Matrix factorization (abstractly)
   * Examples
+
+Need a few good motivating applications to build around.
