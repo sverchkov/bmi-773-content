@@ -1,0 +1,12 @@
+# Jupyter things
+.ipynb_checkpoints
+*/.ipynb_checkpoints
+# Latex things
+*.aux
+*.log
+*.nav
+*.out
+*.pdf
+*.snm
+*.synctex.gz
+*.toc
