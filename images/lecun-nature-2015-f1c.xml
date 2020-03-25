@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Created from PDF via Acrobat SaveAsXML -->
+<!-- Mapping Table version: 28-February-2003 -->
+<TaggedPDF-doc>
+<?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c016 91.163616, 2018/10/29-16:58:49        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/">
+         <xmp:ModifyDate>2020-03-24T20:15:13-05:00</xmp:ModifyDate>
+         <xmp:CreateDate>2020-03-24T20:15:13-05:00</xmp:CreateDate>
+         <xmp:MetadataDate>2020-03-24T20:15:13-05:00</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe InDesign CC 2014 (Macintosh)</xmp:CreatorTool>
+         <dc:format>xml</dc:format>
+         <xmpMM:DocumentID>uuid:56e938ac-6f36-47a5-a40b-72d818c43045</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:f08f306b-5ec5-4f59-bfdf-3de34d930602</xmpMM:InstanceID>
+         <pdf:Producer>Acrobat Distiller 11.0.9(Windows)</pdf:Producer>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?>
+<?xpacket end='r'?>
+
+<Document>
+<Article>
+<Story>
+<NormalParagraphStyle>28 MAY 2015 | VOL 521 | NATURE | 437</NormalParagraphStyle>
+</Story>
+
+<Story>
+<BODY_INDENT>be seen as a kind of hilly landscape in the high-dimensional space ofweight values. The negative gradient vector indicates the directionof steepest descent in this landscape, taking it closer to a minimum,where the output error is low on average.</BODY_INDENT>
+
+<BODY_INDENT>In practice, most practitioners use a procedure called stochasticgradient descent (SGD). This consists of showing the input vector for a few examples, computing the outputs and the errors, computingthe average gradient for those examples, and adjusting the weightsaccordingly. The process is repeated for many small sets of examples from the training set until the average of the objective function stops decreasing. It is called stochastic because each small set of examples gives a noisy estimate of the average gradient over all examples. This simple procedure usually finds a good set of weights surprisinglyquickly when compared with far more elaborate optimization techniques18. After training, the performance of the system is measured on a different set of examples called a test set. This serves to test thegeneralization ability of the machine — its ability to produce sensibleanswers on new inputs that it has never seen during training. </BODY_INDENT>
+
+<BODY_INDENT>Many of the current practical applications of machine learning use linear classifiers on top of hand-engineered features. A two-class linear classifier computes a weighted sum of the feature vector components. If the weighted sum is above a threshold, the input is classified asbelonging to a particular category. </BODY_INDENT>
+
+<BODY_INDENT>Since the 1960s we have known that linear classifiers can only carvetheir input space into very simple regions, namely half-spaces separated by a hyperplane19. But problems such as image and speech recognition require the input–output function to be insensitive toirrelevantvariations of the input, such as variations in position, orientation or illumination of an object, or variations in the pitch or accent of speech,while being very sensitive to particular minute variations (for example, the difference between a white wolf and a breed of wolf-like white dog called a Samoyed). At the pixel level, images of two Samoyeds indifferent poses and in different environments may be very differentfrom each other, whereas two images of a Samoyed and a wolf in thesame position and on similar backgrounds may be very similar to eachother. A linear classifier, or any other ‘shallow’ classifier operating on </BODY_INDENT>
+</Story>
+<Figure>
+
+<ImageData src="images/lecun-nature-2015-f1c_img_0.jpg"/>
+Hidden(2 sigmoid)abdcyyxyx=yzxyzyzzy=˜˜˜˜˜˜zyzxyx=xzyzxxy=Compare outputs with correct answer to get error derivativesjkEyl=yltlEzl=EylylzllEyj=wjkEzkEzj=EyjyjzjEyk=wklEzlEzk=Eykykzkwklwjkwijijkyl=f(zl)zl=wklyklyj=f(zj)zj=wijxiyk=f(zk)zk=wjkyjwklwjkwijk ∈ H2k  H2I  outj ∈ H1i ∈ Inputi</Figure>
+
+<Story>
+<FIGURE_LEGEND>Figure 1 | Multilayer neural networks and backpropagation. a, A multi-layer neural network (shown by the connected dots) can distort the input space to make the classes of data (examples of which are on the red and blue lines) linearly separable. Note how a regular grid (shown on the left) in input space is also transformed (shown in the middle panel)by hiddenunits. This is an illustrative example with only two input units, two hiddenunits and one output unit, but the networks used for object recognitionor natural language processing contain tens or hundreds of thousands ofunits. Reproduced with permission from C. Olah (http://colah.github.io/).b, The chain rule of derivatives tells us how two small effects (that of a small change ofx on y, and that of y on z) are composed. A small change Δx in x gets transformed first into a small change Δy in y by getting multiplied by ∂y/∂x (that is, the definition of partial derivative). Similarly, the change Δy creates a change Δz in z. Substituting one equation into the othergives the chain rule of derivatives — how Δx gets turned into Δz through multiplication by the product of ∂y/∂x and ∂z/∂x. It also works when x, y and z are vectors (and the derivatives are Jacobian matrices). c, Theequations used for computing the forward pass in a neural net with twohidden layers and one output layer, each constituting a module through which one can backpropagate gradients. At each layer, we first computethe total input z to each unit, which is a weighted sum of the outputs of the units in the layer below. Then a non-linear function f(.) is applied toz to get the output of the unit. For simplicity, we have omitted bias terms.The non-linear functions used in neural networks include the rectified linear unit (ReLU) f(z) = max(0,z), commonly used in recent years, aswell as the more conventional sigmoids, such as the hyberbolic tangent, f(z) = (exp(z) − exp(−z))/(exp(z) + exp(−z)) and logistic function logistic, f(z) = 1/(1 + exp(−z)). d, The equations used for computing the backward pass. At each hidden layer we compute the error derivative with respect tothe output of each unit, which is a weighted sum of the error derivatives with respect to the total inputs to the units in the layer above. We thenconvert the error derivative with respect to the output into the error derivative with respect to the input by multiplying it by the gradient of f(z). At the output layer, the error derivative with respect to the output of a unitis computed by differentiating the cost function. This gives yl − tl if the cost function for unit l is 0.5(yl − tl)2, where tl is the target value. Once the ∂E/∂zkis known, the error-derivative for the weight wjk on the connection from unit j in the layer below is just yj ∂E/∂zk.</FIGURE_LEGEND>
+</Story>
+</Article>
+</Document>
+</TaggedPDF-doc>

@@ -37,5 +37,6 @@
       * Neighbor embeddings (abstractly)
       * Topic model / Matrix factorization (abstractly)
       * Examples
+    * Pitfalls of machine learning
 
 Need a few good motivating applications to build around.
