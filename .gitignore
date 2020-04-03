@@ -10,5 +10,9 @@
 *.snm
 *.synctex.gz
 *.toc
+*.dvi
+*.vrb
 # Generated output
 *.html
+# Virtualenv
+venv
