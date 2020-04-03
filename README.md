@@ -8,4 +8,4 @@
 
 ## Notes
 
-* [Decision tree example](tree.ipynb)
+* [Decision tree example](tree.html)
