@@ -25,6 +25,8 @@
 * [Algorithmic Fairness: Measures, Methods and Representations](https://av.tib.eu/media/42850)
 * [http://fairness.haverford.edu/]
 * [https://www.coursera.org/lecture/data-science-ethics/algorithmic-fairness-ULwxb]
+* [Fairness through awareness](https://arxiv.org/pdf/1104.3913.pdf)
+* [https://aaai.org/Conferences/AAAI-18/wp-content/uploads/2017/12/AAAI-18-Accepted-Paper-List.Web_.pdf#136]
 
 ### In healthcare
 
