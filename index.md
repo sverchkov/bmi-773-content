@@ -13,3 +13,4 @@ author: Yuriy Sverchkov
 # Notes
 
 * [Decision tree example](tree.html)
+* [Lime example](lime-example.html)
