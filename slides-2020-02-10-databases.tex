@@ -291,7 +291,7 @@
 	\begin{frame}[fragile]{SQL SELECT \ldots WHERE \ldots AND \ldots OR \ldots}
 		
 		\begin{columns}
-			\column{0.49\linewidth}
+			\column{0.53\linewidth}
 			
 			\begin{tcolorbox}
 				\tiny
@@ -307,8 +307,8 @@
 		\begin{tcolorbox}[colback=LightGreen, colframe=DarkGreen]
 			\small
 			\verb|SELECT * FROM Patients|
-			\verb|    WHERE birth_date > '1975'|
-			\verb|    AND last_name == 'Johnson';|
+			\verb|    WHERE birth_date > '1975-01-01'|
+			\verb|    AND last_name = 'Johnson';|
 		\end{tcolorbox}
 		\pause
 		
@@ -321,12 +321,12 @@
 			}
 			\end{tcolorbox}
 		
-			\column{0.49\linewidth}
+			\column{0.53\linewidth}
 		
 		\begin{tcolorbox}[colback=LightGreen, colframe=DarkGreen]
 			\small
 			\verb|SELECT * FROM Patients|
-			\verb|    WHERE birth_date > '1975'|
+			\verb|    WHERE birth_date >= '1975-01-01'|
 			\verb|    OR last_name = 'Johnson';|
 		\end{tcolorbox}
 		\pause
@@ -374,18 +374,18 @@
 		\pause
 		\begin{tcolorbox}[colback=LightGreen, colframe=DarkGreen]
 			\small
-			\verb|SELECT Patients.first_name, Patients.last_name, Prescriptions.drug|
+			\verb|SELECT Patients.patient_id, Patients.last_name, Prescriptions.drug|
 			\verb|    FROM Patients INNER JOIN Prescriptions|\\
 			\verb|    ON Patients.patient_id = Prescriptions.patient_id;|
 		\end{tcolorbox}
 		\pause
 		\begin{tcolorbox}[colback=LightBlue, colframe=DarkBlue] \tiny
 			\begin{tabular}{lll}
-				\bf first\_name & \bf last\_name & \bf drug \\ \hline
-				Lauren & Johnson & Acetaminophen \\
-				Alice & Smith & Amoxicillin \\
-				Alice & Smith & Lisinopril \\
-				James & White & Albuterol \\
+				\bf patient\_id & \bf last\_name & \bf drug \\ \hline
+				1 & Johnson & Acetaminophen \\
+				2 & Smith & Amoxicillin \\
+				2 & Smith & Lisinopril \\
+				3 & White & Albuterol \\
 			\end{tabular}
 		\end{tcolorbox}
 	\end{frame}
@@ -420,7 +420,7 @@
 			\column{0.47\linewidth}
 			\begin{tcolorbox}[colback=LightBlue, colframe=DarkBlue, title=\tiny INNER JOIN] \tiny
 				\begin{tabular}{lll}
-					\bf first\_name & \bf last\_name & \bf drug \\ \hline
+					\bf patient\_id & \bf last\_name & \bf drug \\ \hline
 					Lauren & Johnson & Acetaminophen \\
 					Alice & Smith & Amoxicillin \\
 					Alice & Smith & Lisinopril \\
@@ -429,14 +429,14 @@
 			\end{tcolorbox}
 		
 		
-			\begin{tcolorbox}[colback=LightBlue, colframe=DarkBlue, title=\tiny OUTER JOIN] \tiny
+			\begin{tcolorbox}[colback=LightBlue, colframe=DarkBlue, title=\tiny FULL OUTER JOIN] \tiny
 				\begin{tabular}{lll}
-					\bf first\_name & \bf last\_name & \bf drug \\ \hline
-					Lauren & Johnson & Acetaminophen \\
-					Alice & Smith & Amoxicillin \\
-					Alice & Smith & Lisinopril \\
-					James & White & Albuterol \\
-					Lauren & Johnson & --- \\
+					\bf patient\_id & \bf last\_name & \bf drug \\ \hline
+					1 & Johnson & Acetaminophen \\
+					2 & Smith & Amoxicillin \\
+					2 & Smith & Lisinopril \\
+					3 & White & Albuterol \\
+					4 & Johnson & --- \\
 					--- & --- & Warfarin \\
 			\end{tabular}
 			
@@ -446,22 +446,22 @@
 		
 		\begin{tcolorbox}[colback=LightBlue, colframe=DarkBlue, title=\tiny LEFT JOIN] \tiny
 			\begin{tabular}{lll}
-				\bf first\_name & \bf last\_name & \bf drug \\ \hline
-				Lauren & Johnson & Acetaminophen \\
-				Alice & Smith & Amoxicillin \\
-				Alice & Smith & Lisinopril \\
-				James & White & Albuterol \\
-				Lauren & Johnson & --- \\
+				\bf patient\_id & \bf last\_name & \bf drug \\ \hline
+				1 & Johnson & Acetaminophen \\
+				2 & Smith & Amoxicillin \\
+				2 & Smith & Lisinopril \\
+				3 & White & Albuterol \\
+				4 & Johnson & --- \\
 			\end{tabular}
 		\end{tcolorbox}
 	
 			\begin{tcolorbox}[colback=LightBlue, colframe=DarkBlue, title=\tiny RIGHT JOIN] \tiny
 				\begin{tabular}{lll}
-					\bf first\_name & \bf last\_name & \bf drug \\ \hline
-					Lauren & Johnson & Acetaminophen \\
-					Alice & Smith & Amoxicillin \\
-					Alice & Smith & Lisinopril \\
-					James & White & Albuterol \\
+					\bf patient\_id & \bf last\_name & \bf drug \\ \hline
+					1 & Johnson & Acetaminophen \\
+					2 & Smith & Amoxicillin \\
+					2 & Smith & Lisinopril \\
+					3 & White & Albuterol \\
 					--- & --- & Warfarin \\
 				\end{tabular}
 			\end{tcolorbox}
